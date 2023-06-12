@@ -7,8 +7,6 @@
 #SBATCH --ntasks=16
 #SBATCH --mem=8g
 
-source /home/yangya/lee02893/.bashrc
-source activate transcriptome
-cd /home/yangya/lee02893/sceletium
+cd /home/yangya/lee02893/sceletium_nox
 files=$(ls /home/yangya/lee02893/sceletium/data/reduced_data)
 fastqc -t 16 ${files[@]}
